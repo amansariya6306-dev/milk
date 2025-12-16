@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vikas Yadav Milk Man</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+    body { background: #f5f7fa; color: #333; }
+    header { background: #2c7be5; color: white; padding: 20px; text-align: center; }
+    nav { background: #1b5fc1; padding: 10px; text-align: center; }
+    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+    nav a:hover { text-decoration: underline; }
+    .container { padding: 30px; max-width: 1000px; margin: auto; }
+    .section { margin-bottom: 40px; }
+    .section h2 { margin-bottom: 15px; color: #2c7be5; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+    .card h3 { margin-bottom: 10px; }
+    .price { font-size: 20px; color: #28a745; font-weight: bold; }
+    button { background: #2c7be5; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; }
+    button:hover { background: #1b5fc1; }
+    form input, form textarea { width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ccc; }
+    footer { background: #2c7be5; color: white; text-align: center; padding: 15px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Vikas Yadav Milk Man</h1>
+  <p>Fresh & Pure Milk Delivered Daily</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#pricing">Pricing</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<div class="container">
+
+  <section id="about" class="section">
+    <h2>About Us</h2>
+    <p>We are Vikas Yadav Milk Man, providing fresh, pure and hygienic milk to homes every morning. Our goal is quality, trust and customer satisfaction.</p>
+  </section>
+
+  <section id="services" class="section">
+    <h2>Our Services</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Home Delivery</h3>
+        <p>Daily doorstep milk delivery on time.</p>
+      </div>
+      <div class="card">
+        <h3>Pure Cow Milk</h3>
+        <p>100% fresh and chemical-free cow milk.</p>
+      </div>
+      <div class="card">
+        <h3>Monthly Subscription</h3>
+        <p>Easy monthly plans with flexible quantity.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" class="section">
+    <h2>Pricing</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Cow Milk</h3>
+        <p class="price">₹60 / litre</p>
+        <button onclick="order('Cow Milk')">Order Now</button>
+      </div>
+      <div class="card">
+        <h3>Buffalo Milk</h3>
+        <p class="price">₹70 / litre</p>
+        <button onclick="order('Buffalo Milk')">Order Now</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <form onsubmit="sendMessage(event)">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="tel" id="phone" placeholder="Mobile Number" required>
+      <textarea id="message" placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+</div>
+
+<footer>
+  <p>© 2025 Vikas Yadav Milk Man | All Rights Reserved</p>
+</footer>
+
+<script>
+  function order(product) {
+    alert('Thank you for ordering ' + product + '! We will contact you soon.');
+  }
+
+  function sendMessage(event) {
+    event.preventDefault();
+    const name = document.getElementById('name').value;
+    alert('Thank you ' + name + '! Your message has been sent.');
+    event.target.reset();
+  }
+</script>
+
+</body>
+</html>
